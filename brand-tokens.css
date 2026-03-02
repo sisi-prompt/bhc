@@ -110,6 +110,15 @@
   --line-height-section:    1em;
   --line-height-body:       1.5em;
 
+  /* --- FONT SIZES --- */
+  /* MINIMUM font size across all designs is 36px — never go below this */
+  --font-size-min:        36px;   /* Absolute minimum — captions, labels, fine print */
+  --font-size-body:       40px;   /* Body text */
+  --font-size-accent:     40px;   /* Accents & buttons */
+  --font-size-section:    44px;   /* Section headers */
+  --font-size-subheading: 52px;   /* Sub-headings */
+  --font-size-heading:    80px;   /* Main headings */
+
 
   /* --- BACKGROUND COLORS --- */
   --color-bg-white:  #FFFFFF;   /* White */
@@ -129,11 +138,20 @@
 
 
 /* --------------------------------------------
+   GLOBAL RULE — Minimum Font Size
+   Never use any font size below 36px in any design.
+   -------------------------------------------- */
+
+* { font-size: max(36px, inherit); }
+
+
+/* --------------------------------------------
    TYPOGRAPHY ROLES — Ready-to-use classes
    -------------------------------------------- */
 
 .heading {
   font-family: var(--font-heading);
+  font-size: var(--font-size-heading);
   font-weight: var(--font-weight-heading);
   font-style: var(--font-style-heading);
   letter-spacing: var(--letter-spacing-heading);
@@ -143,6 +161,7 @@
 
 .subheading {
   font-family: var(--font-subheading);
+  font-size: var(--font-size-subheading);
   font-weight: var(--font-weight-subheading);
   font-style: var(--font-style-subheading);
   letter-spacing: 0px;
@@ -152,6 +171,7 @@
 
 .body-text {
   font-family: var(--font-body);
+  font-size: var(--font-size-body);
   font-weight: var(--font-weight-body);
   font-style: var(--font-style-body);
   text-transform: none;
@@ -160,6 +180,7 @@
 
 .section-header {
   font-family: var(--font-section);
+  font-size: var(--font-size-section);
   font-weight: var(--font-weight-section);
   font-style: var(--font-style-section);
   letter-spacing: var(--letter-spacing-section);
@@ -169,6 +190,7 @@
 
 .accent, button, .btn {
   font-family: var(--font-accent);
+  font-size: var(--font-size-accent);
   font-weight: var(--font-weight-accent);
   font-style: var(--font-style-accent);
 }
